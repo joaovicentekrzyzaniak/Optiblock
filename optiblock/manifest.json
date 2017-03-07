@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Optiblock",
+  "version": "1.0",
+
+  "description": "Removes advertisement images using OCR.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+ 
+  "permissions": [
+	"activeTab"
+  ],
+
+  "content_scripts": [
+    {
+	//"matches": ["<all_urls>"],
+	  "matches": ["http://www.meuip.com.br/", "http://www.chapeco.org/classificados/", "http://www.megachapeco.com.br/classificados/", 
+	  "http://portalaconteceu.com.br/", "http://192.168.254.167/"],
+      "js": ["jquery-3.1.1.min.js", "ocrad.js", "optiblock.js"]
+    }
+  ]
+}
